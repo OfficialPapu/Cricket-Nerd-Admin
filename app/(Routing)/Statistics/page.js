@@ -8,6 +8,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 export default function App() {
+    const Url = "http://localhost/admin/app/API/POST/";
+    const urlget = "http://localhost/admin/app/API/GET/Statistics.php";
+    const urlpost = Url + "Statistics.php";
     const [options, setOptions] = useState([]);
     const [Player, setPlayer] = useState("");
     const [PlayerID, setPlayerID] = useState("");
@@ -66,10 +69,9 @@ export default function App() {
         ListPlayers();
         dropdownRef.current.focus();
     }, []);
-
     const ListPlayers = async () => {
         try {
-            let response = await axios.get("http://localhost/The Cricket Nerd/API/GET/Statistics.php", { params: { ListAllPlayers: true } });
+            let response = await axios.get(urlget, { params: { ListAllPlayers: true } });
             let data = response.data;
             if (data.length > 0) {
                 setOptions(data);
@@ -111,7 +113,7 @@ export default function App() {
             formDataToSubmit.append(key, formData[key]);
         }
         formDataToSubmit.append("PlayerID", PlayerID);
-        let response = await axios.post("http://localhost/The Cricket Nerd/API/POST/Statistics.php", formDataToSubmit, {
+        let response = await axios.post(urlpost, formDataToSubmit, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
@@ -197,11 +199,11 @@ export default function App() {
                                 {options.map((Item, index) => (
                                     <div
                                         key={Item['Player Name']}
-                                        onClick={() => handlePlayer(Item['Player Name'], Item['ID'], `http://localhost/The Cricket Nerd/API/POST/${Item['Player Photo']}`)}
+                                        onClick={() => handlePlayer(Item['Player Name'], Item['ID'], `${Url + Item['Player Photo']}`)}
                                         className={`flex items-center gap-3 px-4 py-3 hover:bg-muted rounded-t-md cursor-pointer ${highlightedIndex === index ? "bg-gray-200" : ""}`}
                                     >
                                         <img
-                                            src={`http://localhost/The Cricket Nerd/API/POST/${Item['Player Photo']}`}
+                                            src={`${Url + Item['Player Photo']}`}
                                             alt={Item['Player Name']}
                                             width={32}
                                             height={32}

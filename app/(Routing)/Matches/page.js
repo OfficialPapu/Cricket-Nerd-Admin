@@ -8,6 +8,8 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Page = () => {
+    const urlget = "http://localhost/admin/app/API/GET/Matches.php";
+    const urlpost = "http://localhost/admin/app/API/POST/Matches.php";
     const [TournamentName, setTournamentName] = useState("");
     const [CountryA, setCountryA] = useState("");
     const [CountryB, setCountryB] = useState("");
@@ -160,8 +162,7 @@ const Page = () => {
         form.append("CountryB", CountryB);
         form.append("Schedule", Schedule);
         form.append("Time", Time);
-        const url = "http://localhost/The Cricket Nerd/API/POST/Matches.php";
-        axios.post(url, form)
+        axios.post(urlpost, form)
             .then((response) => {
                 response = response.data;
                 if (response === "Success") {
@@ -205,7 +206,7 @@ const Page = () => {
 
     const ListAllCountry = async () => {
         try {
-            let response = await axios.get("http://localhost/The Cricket Nerd/API/GET/Matches.php", { params: { ListAllCountry: true } });
+            let response = await axios.get(urlget, { params: { ListAllCountry: true } });
             let data = response.data;
             if (data.length > 0) {
                 setOptions(data);
@@ -263,11 +264,11 @@ const Page = () => {
                                 {options.map((option, index) => (
                                     <div
                                         key={option['Country Name']}
-                                        onClick={() => handleCountryA(option['Country Name'], `/Flags/1x1/${option['Icon']}`)}
+                                        onClick={() => handleCountryA(option['Country Name'], `Images/Flags/${option['Icon']}`)}
                                         className={`flex items-center gap-3 px-4 py-3 hover:bg-muted rounded-t-md cursor-pointer ${highlightedIndexA === index ? "bg-gray-200" : ""}`}
                                     >
                                         <img
-                                            src={`/Flags/1x1/${option['Icon']}`}
+                                            src={`Images/Flags/${option['Icon']}`}
                                             alt={option['Country Name']}
                                             width={32}
                                             height={32}
@@ -310,11 +311,11 @@ const Page = () => {
                                 {options.map((option, index) => (
                                     <div
                                         key={option['Country Name']}
-                                        onClick={() => handleCountryB(option['Country Name'], `/Flags/1x1/${option['Icon']}`)}
+                                        onClick={() => handleCountryB(option['Country Name'], `Images/Flags/${option['Icon']}`)}
                                         className={`flex items-center gap-3 px-4 py-3 hover:bg-muted rounded-t-md cursor-pointer ${highlightedIndexB === index ? "bg-gray-200" : ""}`}
                                     >
                                         <img
-                                            src={`/Flags/1x1/${option['Icon']}`}
+                                            src={`Images/Flags/${option['Icon']}`}
                                             alt={option['Country Name']}
                                             width={32}
                                             height={32}

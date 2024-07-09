@@ -5,6 +5,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const page = () => {
+    const Url = "http://localhost/admin/app/API/POST/Videos.php";
     const [VideoTitle, setVideoTitle] = useState();
     const [Description, setDescription] = useState();
     const [Link, setLink] = useState();
@@ -22,7 +23,6 @@ const page = () => {
             Form.append("Image", Image);
         }
 
-        const Url = "http://localhost/The Cricket Nerd/API/POST/Videos.php";
         axios.post(Url, Form).then((response) => {
             response = response.data;
             if (response == "Success") {

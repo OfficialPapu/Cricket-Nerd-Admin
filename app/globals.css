@@ -22,31 +22,6 @@ body {
 header {
   position: relative;
 }
-@media (max-width: 1024px) {
-  .Navbar {
-    position: absolute;
-    width: 300px;
-    box-shadow: 0 0 5px rgba(46, 49, 146, 0.1);
-    /* background-color: rgba(204, 205, 248, 0.1); */
-    background-color: white;
-
-    top: 70px;
-    right: 10px;
-    height: 400px;
-    border-radius: 8px;
-    padding: 1rem 0 0 1rem;
-    transform: translateX(100%);
-  }
-
-  .Navbar:hover {
-    box-shadow: 0 0 7px rgba(46, 49, 146, 0.3);
-  }
-
-  .Navbar ul li {
-    padding: 1rem;
-    font-size: 1.2rem;
-  }
-}
 
 @media (max-width: 500px) {
   .Navbar {

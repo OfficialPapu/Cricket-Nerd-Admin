@@ -5,6 +5,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Page = () => {
+    const url = "http://localhost/admin/app/API/POST/New Player.php";
     const [PlayerName, setPlayerName] = useState('');
     const [PlayerRole, setPlayerRole] = useState('');
     const [PlayerType, setPlayerType] = useState('');
@@ -28,7 +29,6 @@ const Page = () => {
             formData.append("Image", Image);
         }
 
-        const url = "http://localhost/The Cricket Nerd/API/POST/New Player.php";
         axios.post(url, formData).then((response) => {
             response = response.data;
             if (response === "Success") {

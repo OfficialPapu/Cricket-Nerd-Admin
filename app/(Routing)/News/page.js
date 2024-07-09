@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const page = () => {
+    const Url = "http://localhost/admin/app/API/POST/News.php";
     const [Title, setTitle] = useState();
     const [Description, setDescription] = useState();
     const [Author, setAuthor] = useState();
@@ -22,7 +23,6 @@ const page = () => {
         if (Image) {
             Form.append("Image", Image);
         }
-        const Url = "http://localhost/The Cricket Nerd/API/POST/News.php";
         axios.post(Url, Form).then((response) => {
             response = response.data;
             if (response == "Success") {
