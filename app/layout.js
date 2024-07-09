@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
       <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'/>
-      <link rel="shortcut icon" href="Logo/The Cricket Nerd.png" type="image/x-icon" />
+      <link rel="shortcut icon" href="/Logo/The Cricket Nerd.png" type="image/x-icon" />
     </head>
       <body>
         <Navbar/>
