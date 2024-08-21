@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+.admin-side-bar-container a {
+    color: black;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(128, 128, 128, 0.5);
+    border-radius: 8px;
+}
+
+.top-nav-bar {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    border-bottom: 1px solid #e5f0f9;
+    box-shadow: 0 0 20px rgba(132, 0, 255, 0.148);
+}
+
+.overlay {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.221);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+}
+
+.top-nav-bar i {
+    font-size: 2rem;
+    margin: 0 1rem 0 0;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.menu-icon i.bx-x {
+    transform: rotate(90deg);
+}
+
+.dreamskin-icon img {
+    width: 4rem;
+    height: 4rem;
+    margin: 0 10px;
+}
+
+.main-side-bar {
+    position: fixed;
+    left: 0;
+    top: 65px;
+    background-color: white;
+    width: 20vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    transform: scale(0);
+    z-index: 10;
+    border-right: 1px solid #e5f0f9;
+    border-bottom: 1px solid #e5f0f9;
+}
+
+body.Active-navbar .main-side-bar {
+    transform: scale(1);
+}
+
+body.Active-navbar .overlay {
+    display: block;
+}
+
+.first-side-bar-box {
+    height: 40vh;
+    display: flex;
+}
+
+.first-side-bar-box ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.first-side-bar-box ul li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.first-side-bar-box ul li a {
+    padding: 15px 0 15px 20px;
+    transition: .5s;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.first-side-bar-box ul li a:hover {
+    background-color: rgb(207, 223, 252);
+}
+
+
+
+@media (max-width:700px) {
+    .dreamskin-icon img {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .main-side-bar {
+        width: 300px;
+        top: 49px;
+    }
+}
+
+.subitem-menu .product-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px 15px 20px;
+    transition: .3s;
+}
+
+.product-title {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-icon i {
+    font-size: 25px;
+}
+
+.subitem-menu {
+    padding: 0 !important;
+}
+
+.subitem-menu:hover {
+    background-color: white !important;
+}
+
+.subitem-menu .product-content:hover {
+    background-color: rgb(207, 223, 252);
+}
+
+.subitem-menu ul li a:hover {
+    background-color: #e5f0f9;
+}
+
+.submenu-ul .submenu {
+    padding: 0 0 0 20px;
+}
+
+.submenu-ul .submenu li a i {
+    font-size: 25px;
+    font-weight: 550;
+}
+
+
+.submenu {
+    background-color: #e5f0f9;
+}
+
+.submenu li a:hover {
+    color: #2275FC;
+}
+
+.subitem-menu .bx-chevron-down,
+.submenu-ul .submenu li a {
+    transition: .3s;
+}
+
+.subitem-menu.active .bx-chevron-down {
+    transform: rotate(180deg);
+}
+
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.subitem-menu.active .submenu {
+    max-height: 200px;
+}

@@ -1,0 +1,10 @@
+[21-Aug-2024 08:10:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php:5
+Stack trace:
+#0 /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Login.php(4): include_once()
+#1 {main}
+  thrown in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 5
+[21-Aug-2024 08:11:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php:5
+Stack trace:
+#0 /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Login.php(4): include_once()
+#1 {main}
+  thrown in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 5

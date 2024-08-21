@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin authentication</title>
+    <link rel="shortcut icon" href="../../Media/Logo/The Cricket Nerd.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../CSS/butterup.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="flex items-center justify-center h-screen bg-background" data-id="1">
+        <div class="border bg-card text-card-foreground w-full max-w-md rounded-2xl shadow-lg" data-id="2"
+            data-v0-t="card">
+              <div class="flex flex-col space-y-2 text-center p-8" data-id="3">
+                <h3 class="whitespace-nowrap tracking-tight text-3xl font-bold" data-id="4">
+                    Admin Login
+                </h3>
+                <p class="text-sm text-muted-foreground" data-id="5">
+                    Enter your username and password to access the admin dashboard.
+                </p>
+            </div>
+            <div class="space-y-4 px-8 py-4" data-id="6">
+                <div class="space-y-2" data-id="7">
+                    <label class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-base font-medium"
+                        for="username" data-id="8">Username</label><input
+                        class="flex h-10 w-full ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 rounded-lg border border-input bg-background px-3 py-2 text-sm shadow-sm focus:outline-none focus:ring-1 focus:ring-primary"
+                        id="email" placeholder="Enter your username" type="text" />
+                </div>  
+                <div class="space-y-2" data-id="10">
+                    <label class="peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-base font-medium"
+                        for="password" data-id="11">Password</label><input
+                        class="flex h-10 w-full ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 rounded-lg border border-input bg-background px-3 py-2 text-sm shadow-sm focus:outline-none focus:ring-1 focus:ring-primary"
+                        id="Pass" placeholder="Enter your password" type="password" />
+                </div>
+            </div>
+            <div class="flex items-center p-8" data-id="13">
+                <button
+                    class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 w-full rounded-lg bg-primary text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-1 focus:ring-primary bg-[#18181a] text-white" id="btn">
+                    Login
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="../JS/butterup.min.js"></script>
+<script src="../JS/Login.js"></script>
+
+</html>
