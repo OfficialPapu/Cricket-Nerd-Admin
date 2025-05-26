@@ -56,14 +56,17 @@ $sql = "SELECT
 FROM players P ORDER BY P.ID ASC";
 
 $records = $conn->query($sql);
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Statistics Management</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-white" style="background-image: url('Media/Logo/bg-cn.jpg'); background-size: cover; background-position: center;">
     <h1 class="text-2xl font-bold text-center text-white mt-20 mb-4"> All Players | The Cricket Nerd</h1>
     <div class="container mx-auto rounded-lg shadow-lg mt-8">
@@ -71,9 +74,9 @@ $records = $conn->query($sql);
             <?php if ($records->num_rows > 0): ?>
                 <?php while ($row = $records->fetch_assoc()): ?>
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                    <div class="flex items-center p-4">
-    <img src="<?php echo 'https://admin.thecricnerd.com/Media/Images/' . htmlspecialchars($row['Player Photo']); ?>" alt="Player Photo" class="w-16 h-16 rounded-full object-cover mr-4">
-    <div>
+                        <div class="flex items-center p-4">
+                            <img src="<?php echo 'https://admin.thecricnerd.com/Media/Images/' . htmlspecialchars($row['Player Photo']); ?>" alt="Player Photo" class="w-16 h-16 rounded-full object-cover mr-4">
+                            <div>
 
                                 <p class="text-lg font-bold text-gray-800"><?php echo htmlspecialchars($row['Player Name']); ?></p>
                                 <p class="text-sm text-gray-600">Player ID: <?php echo htmlspecialchars($row['Player ID']); ?></p>
@@ -85,7 +88,7 @@ $records = $conn->query($sql);
                                 <input type="hidden" name="format" value="<?php echo htmlspecialchars($format); ?>">
                                 <button type="submit" class="text-white bg-red-500 px-4 py-2 rounded-lg hover:bg-red-600">Delete</button>
                             </form>
-                            <a href="Update Players/Statistics.php?PlayerID=<?php echo htmlspecialchars($row['Player ID']); ?>" class="text-white bg-blue-500 px-4 py-2 rounded-lg hover:bg-blue-600">Update</a>
+                            <a href="Control Pages/Statistics.php?PlayerID=<?php echo htmlspecialchars($row['Player ID']); ?>" class="text-white bg-blue-500 px-4 py-2 rounded-lg hover:bg-blue-600">Update</a>
                         </div>
                     </div>
                 <?php endwhile; ?>
@@ -103,7 +106,7 @@ $records = $conn->query($sql);
             var toast = document.getElementById("toast");
             toast.textContent = message;
             toast.className = "fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-6 py-3 rounded-lg shadow-lg opacity-100";
-            setTimeout(function () {
+            setTimeout(function() {
                 toast.className = toast.className.replace("opacity-100", "opacity-0");
             }, 3000);
         }
@@ -114,4 +117,5 @@ $records = $conn->query($sql);
         <?php endif; ?>
     </script>
 </body>
+
 </html>

@@ -1,6 +1,3 @@
-<?php
-// includes/bowling.php
-?>
 <div class="p-4 md:p-6">
   <div class="grid grid-cols-1 gap-6">
     <div class="bg-gray-50 rounded-lg p-4 md:p-6">

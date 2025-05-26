@@ -72,7 +72,7 @@ $(document).ready(function () {
                     $('#selectedPlayer').text('Select a Player');
                     $('#selectedPlayerImage').attr('src', 'https://generated.vusercontent.net/placeholder.svg');
                     butterup.toast({
-                        message: 'Video successfully uploaded',
+                        message: 'Statistics successfully uploaded',
                         icon: true,
                         dismissable: true,
                         type: 'success',

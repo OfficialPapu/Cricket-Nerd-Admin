@@ -1,6 +1,4 @@
 <?php
-session_start();
-ob_start();
 $base_url = $_SERVER['DOCUMENT_ROOT'] . "/Admin/";
 include $base_url . 'Assets/Components/Navbar.php';
 include $base_url . 'Assets/PHP/API/Config/Config.php';
@@ -29,16 +27,16 @@ include $base_url . 'Assets/PHP/API/Config/Config.php';
       }
     }
   </script>
-  <link rel="stylesheet" href="includes/Style.css">
+  <link rel="stylesheet" href="Assets/CSS/Match Live Action.css">
 </head>
 
 <body>
   <!-- Main Container -->
-  <div class="container mx-auto px-4 py-6 max-w-7xl">
+  <div class="container mx-auto px-4 py-6 max-w-7xl sm:mt-24 mt-12">
 
     <!-- Match & Country Selection -->
     <div class="bg-white rounded-2xl shadow-xl mb-8 overflow-hidden fade-in-up">
-      <?php include 'includes/header.php'; ?>
+      <?php include 'Assets/Components/Match Live Action/Match Live Action Header.php'; ?>
     </div>
 
     <!-- Tab Navigation and Content -->
@@ -67,27 +65,27 @@ include $base_url . 'Assets/PHP/API/Config/Config.php';
 
       <!-- Batting Tab -->
       <div id="content-batting" class="tab-content active">
-        <?php include 'includes/batting.php'; ?>
+        <?php include 'Assets/Components/Match Live Action/Batting.php'; ?>
       </div>
 
       <!-- Bowling Tab -->
       <div id="content-bowling" class="tab-content">
-        <?php include 'includes/bowling.php'; ?>
+        <?php include 'Assets/Components/Match Live Action/Bowling.php'; ?>
       </div>
 
       <!-- Extras Tab -->
       <div id="content-extras" class="tab-content">
-        <?php include 'includes/extras.php'; ?>
+        <?php include 'Assets/Components/Match Live Action/Extras.php'; ?>
       </div>
 
       <!-- Commentary Tab -->
       <div id="content-commentary" class="tab-content">
-        <?php include 'includes/commentary.php'; ?>
+        <?php include 'Assets/Components/Match Live Action/Commentary.php'; ?>
       </div>
     </div>
   </div>
 
-  <script src="includes/Script.js"></script>
+  <script src="Assets/JS/Match Live Action.js"></script>
   <script src="Assets/JS/butterup.min.js"></script>
 </body>
 

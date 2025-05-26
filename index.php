@@ -15,8 +15,6 @@ include 'Assets/Components/Navbar.php';
 
 <body class="bg-gray-100" style="background-image: url('Media/Logo/bg-cn.jpg'); background-size: cover; background-position: center;">
 
-
-
     <div class="mt-[100px]">
         <h1 class="text-center mb-8 w-full text-3xl font-extrabold text-white">The Cricket Nerd | Sports Dashboard</h1>
         <main class="container mx-auto px-5 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-4 mb-8">
@@ -110,14 +108,8 @@ include 'Assets/Components/Navbar.php';
                     <a href="Pages/Squads.php" class="btn bg-black text-white px-5 py-2 rounded-full hover:bg-[#2e3192]">
                         Add Squads
                     </a>
-                    <a href="Pages/Batting.php" class="btn bg-black text-white px-5 py-2 rounded-full hover:bg-[#2e3192]">
-                        Add Batting
-                    </a>
-                    <a href="Pages/Bowling.php" class="btn bg-black text-white px-5 py-2 rounded-full hover:bg-[#2e3192]">
-                        Add Bowling
-                    </a>
-                    <a href="Pages/Extras.php" class="btn bg-black text-white px-5 py-2 rounded-full hover:bg-[#2e3192]">
-                        Add Extras
+                    <a href="Pages/Match Live Action.php" class="btn bg-black text-white px-5 py-2 rounded-full hover:bg-[#2e3192]">
+                        Add Match Live Action
                     </a>
                 </div>
             </section>
