@@ -76,4 +76,27 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
         }
         echo json_encode($data);
     }
+
+
+    if (isset($_GET['PlayerData'])) {
+        $MatchID = $_GET["MatchID"];
+        $Country = $_GET["Country"];
+        $Query = $conn->query("SELECT * FROM `squads` WHERE `Match ID` = '$MatchID' AND `Team` = '$Country'");
+
+        $data = array();
+        while ($row = $Query->fetch_assoc()) {
+            $data[] = $row;
+        }
+        echo json_encode($data);
+    }
+
+    if (isset($_GET['FetchCommentary'])) {
+        $ID = $_GET["matchID"];
+        $Query = $conn->query("SELECT * FROM `commentary` WHERE `Match ID` = '$ID' ORDER BY `ID` DESC");
+        $data = array();
+        while ($row = $Query->fetch_assoc()) {
+            $data[] = $row;
+        }
+        echo json_encode($data);
+    }
 }

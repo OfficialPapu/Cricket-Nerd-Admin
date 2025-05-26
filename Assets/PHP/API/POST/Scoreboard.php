@@ -2,7 +2,7 @@
 <?php
 session_start();
 ob_start();
-$base_url = $_SERVER['DOCUMENT_ROOT'] . "/";
+$base_url = $_SERVER['DOCUMENT_ROOT'] . "/Admin/";
 include $base_url . 'Assets/PHP/API/Config/Config.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -40,9 +40,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $penaltyRuns = $_POST['PenaltyRuns'];
         $totalExtras = $_POST['TotalExtras'];
         $checkQuery = $conn->query("SELECT * FROM `scorecard_extras` WHERE `Match ID` = '$matchID' AND `Country` = '$country'");
-        
+
         if ($checkQuery && $checkQuery->num_rows > 0) {
-        $sql = $conn->query("UPDATE `scorecard_extras` 
+            $sql = $conn->query("UPDATE `scorecard_extras` 
         SET 
             `Inning` = '$inning',
             `Byes` = '$byes',
@@ -52,30 +52,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             `Penalty Runs` = '$penaltyRuns',
             `Total Extras` = '$totalExtras'
         WHERE `Match ID` = '$matchID' AND `Country` = '$country'");
-        }else{
-        $sql = $conn->query("INSERT INTO `scorecard_extras`(`Match ID`, `Country`, `Inning`, `Byes`, `Leg Byes`, `Wides`, `No Balls`, `Penalty Runs`, `Total Extras`) 
+        } else {
+            $sql = $conn->query("INSERT INTO `scorecard_extras`(`Match ID`, `Country`, `Inning`, `Byes`, `Leg Byes`, `Wides`, `No Balls`, `Penalty Runs`, `Total Extras`) 
         VALUES ('$matchID', '$country', '$inning', '$byes', '$legByes', '$wides', '$noBalls', '$penaltyRuns', '$totalExtras')");
         }
         if ($sql) {
-            echo "Extra added successfully!";
+            echo "Success";
         } else {
-            echo "Error: Unable to add extra. Please try again.";
+            echo "Error";
         }
     }
     if (isset($_POST['AddBatting'])) {
 
-        $SquadID = $_POST['squad'];
-        $runs = $_POST['Runs'];
-        $balls = $_POST['Balls'];
-        $fours = $_POST['Fours'];
-        $sixes = $_POST['Sixes'];
-        $strikeRate = $_POST['StrikeRate'];
-        $status = $_POST['status'];
+        $SquadID = $_POST['SquadID'];
+        $runs = $_POST['BattingRuns'];
+        $balls = $_POST['BattingBalls'];
+        $fours = $_POST['BattingFours'];
+        $sixes = $_POST['BattingSixes'];
+        $strikeRate = $_POST['BattingSR'];
+        $status = $_POST['BattingStatus'];
 
         $checkQuery = $conn->query("SELECT * FROM `scorecard_batting` WHERE `Squad ID` = '$SquadID'");
 
         if ($checkQuery && $checkQuery->num_rows > 0) {
-    $sql = $conn->query("UPDATE `scorecard_batting` 
+            $sql = $conn->query("UPDATE `scorecard_batting` 
         SET 
             `Runs` = '$runs',
             `Balls` = '$balls',
@@ -84,30 +84,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             `Strike Rate` = '$strikeRate',
             `Status` = '$status'
         WHERE `Squad ID` = '$SquadID'");
-
         } else {
             $sql = $conn->query("INSERT INTO `scorecard_batting` 
                 (`Squad ID`, `Runs`, `Balls`, `Fours`, `Sixes`, `Strike Rate`, `Status`) 
                 VALUES ('$SquadID', '$runs', '$balls', '$fours', '$sixes', '$strikeRate', '$status')");
         }
         if ($sql) {
-            echo "Batting added successfully!";
+            echo "Success";
         } else {
-            echo "Error: Unable to add Batting. Please try again.";
+            echo "Error";
         }
     }
     if (isset($_POST['AddBowling'])) {
 
-        $SquadID = $_POST['squad'];
-        $overs = $_POST['Overs'];
-        $maidens = $_POST['Maidens'];
-        $runs = $_POST['Runs'];
-        $wickets = $_POST['Wickets'];
-        $economy = $_POST['Economy'];
+        $SquadID = $_POST['SquadID'];
+        $overs = $_POST['BowlingOvers'];
+        $maidens = $_POST['BowlingMaidens'];
+        $runs = $_POST['BowlingRuns'];
+        $wickets = $_POST['BowlingWickets'];
+        $economy = $_POST['BowlingEconomy'];
 
         $checkQuery = $conn->query("SELECT * FROM `scorecard_bowling` WHERE `Squad ID` = '$SquadID'");
-         if ($checkQuery && $checkQuery->num_rows > 0) {
-        $sql = $conn->query("UPDATE `scorecard_bowling` 
+        if ($checkQuery && $checkQuery->num_rows > 0) {
+            $sql = $conn->query("UPDATE `scorecard_bowling` 
             SET 
                 `Overs` = '$overs',
                 `Maidens` = '$maidens',
@@ -121,9 +120,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 VALUES ('$SquadID', '$overs', '$maidens', '$runs', '$wickets', '$economy')");
         }
         if ($sql) {
-            echo "Bowling added successfully!";
+            echo "Success";
         } else {
-            echo "Error: Unable to add Bowling. Please try again.";
+            echo "Error";
+        }
+    }
+
+    if (isset($_POST['AddCommentary'])) {
+        $matchID = $_POST['match'];
+        $commentary = addslashes($_POST['commentary']);
+        $sql = $conn->query("INSERT INTO `commentary`(`Match ID`, `Commentary`) VALUES ('$matchID', '$commentary')");
+        if ($sql) {
+            echo "Success";
+        } else {
+            echo "Error";
         }
     }
 }
