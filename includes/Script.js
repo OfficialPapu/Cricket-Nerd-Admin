@@ -13,9 +13,10 @@ $(document).ready(function () {
     let selectedOption = $(this).find(":selected");
     let countryA = selectedOption.data("country-a");
     let countryB = selectedOption.data("country-b");
-    $("#country-selector").html('<option value="" disabled selected class="text-gray-500">Select a country</option>'); // Reset options
-    $("#country-selector").append('<option value="' + countryA + '" class="text-black">' + countryA + '</option>');
-    $("#country-selector").append('<option value="' + countryB + '" class="text-black">' + countryB + '</option>')
+    const countries = [countryA, countryB];
+    const countryOptions = countries.map(c => `<option value="${c}" class="text-black">${c}</option>`).join("");
+    $("#country-selector").html(`<option value="" disabled selected class="text-gray-500">Select a country</option>${countryOptions}`);
+    $("#current-batting").html(`<option value="" disabled selected class="text-gray-500">Select batting</option>${countryOptions}`);
     $('#selected-match').text(selectedOption.text());
     $('#match-info').removeClass('hidden');
     FetchCommentary();
@@ -26,8 +27,31 @@ $(document).ready(function () {
     $('#selected-country').text(country);
     InsertPlayersIntoSelect();
     AppendExtrasData();
+    $('#score-dashboard').removeClass('hidden');
+    $('#country-b-label').text(`${country} Score`);
+    UpdateScoreboard();
   });
 
+  function UpdateScoreboard() {
+    let MatchID = $('#match-selector').val();
+    let Country = $('#country-selector').val();
+    $.ajax({
+      type: "GET",
+      url: "Assets/PHP/API/GET/Scoreboard.php",
+      data: { FetchScore: true, MatchID: MatchID, Country: Country },
+      dataType: "json",
+      success: function (response) {
+        const data = response[0];
+        if (response.length > 0) {
+          $('#score').val(data['Score']);
+          $('#over').val(data['Over']);
+          $('#total-overs').val(data['Total Overs']);
+          $('#current-batting').val(data.Batting).change();
+          $('#match-result').val(data.Result);
+        }
+      }
+    });
+  }
 
   function InsertPlayersIntoSelect() {
     let MatchID = $('#match-selector').val();
@@ -64,6 +88,12 @@ $(document).ready(function () {
           $('#batting-sixes').val(batting.Sixes || 0);
           $('#batting-sr').val(batting['Strike Rate'] || 0);
           $('#batting-status').val(batting.Status || 'Out').change();
+          if (batting['Batter Striker']) {
+            $('#batting-striker').val(batting['Batter Striker']).change();
+          }
+          if (batting['Batter Action']) {
+            $('#batting-action').val(batting['Batter Action']).change();
+          }
         } else {
           $('#batting-runs, #batting-balls, #batting-fours, #batting-sixes, #batting-sr').val(0);
         }
@@ -87,6 +117,14 @@ $(document).ready(function () {
           $('#bowling-runs').val(bowling.Runs || 0);
           $('#bowling-wickets').val(bowling.Wickets || 0);
           $('#bowling-economy').val(bowling.Economy || 0);
+          $('#bowling-noball').val(bowling['No Balls'] || 0);
+          $('#bowling-wide').val(bowling['Wides'] || 0);
+          if (bowling['Bowler Striker']) {
+            $('#bowling-striker').val(bowling['Bowler Striker']).change();
+          }
+          if (bowling['Bowler Action']) {
+            $('#bowling-action').val(bowling['Bowler Action']).change();
+          }
         } else {
           $('#bowling-overs, #bowling-maidens, #bowling-runs, #bowling-wickets, #bowling-economy').val(0);
         }
@@ -152,10 +190,47 @@ $(document).ready(function () {
     });
   }
 
+  $('#score-form').on("submit", function (e) {
+    e.preventDefault();
+    if (!validateSelections()) return;
+    let matchID = $('#match-selector').val();
+    let country = $('#country-selector').val();
+    const formData = new FormData(this);
+    formData.append("MatchID", matchID);
+    formData.append("Country", country);
+    formData.append("UpdateScoreBoard", true);
+    $.ajax({
+      url: "Assets/PHP/API/POST/Scoreboard.php",
+      type: "POST",
+      data: formData,
+      processData: false,
+      contentType: false,
+      success: function (response) {
+        response = response.trim();
+        if (response === "Success") {
+          butterup.toast({
+            message: 'Score successfully updated',
+            icon: true,
+            dismissable: true,
+            type: 'success',
+          });
+        } else {
+          butterup.toast({
+            message: 'Error updating score',
+            icon: true,
+            dismissable: true,
+            type: 'error',
+          });
+        }
+      }
+    });
+  })
+
+
   $('#batting-form').on("submit", function (e) {
     e.preventDefault();
     if (!validateSelections()) return;
-    if($('#batting-player').val() == "" || $('#batting-player').val() == null) {
+    if ($('#batting-player').val() == "" || $('#batting-player').val() == null) {
       butterup.toast({
         message: 'Please select a player first',
         icon: true,
@@ -196,7 +271,7 @@ $(document).ready(function () {
   $('#bowling-form').submit(function (e) {
     e.preventDefault();
     if (!validateSelections()) return;
-    if($('#bowling-player').val() === "" || $('#bowling-player').val() === null) {
+    if ($('#bowling-player').val() === "" || $('#bowling-player').val() === null) {
       butterup.toast({
         message: 'Please select a player first',
         icon: true,

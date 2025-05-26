@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
         echo json_encode($data);
     }
 
- 
+
 
     if (isset($_GET['Extras'])) {
         $ID = $_GET["ID"];
@@ -95,6 +95,24 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
         $Query = $conn->query("SELECT * FROM `commentary` WHERE `Match ID` = '$ID' ORDER BY `ID` DESC");
         $data = array();
         while ($row = $Query->fetch_assoc()) {
+            $data[] = $row;
+        }
+        echo json_encode($data);
+    }
+    if (isset($_GET['FetchScore'])) {
+        $MatchID = $_GET["MatchID"];
+        $Country = $_GET["Country"];
+        $Query = $conn->query("SELECT `Country A`, `Country B`, `Custom Name A`, `Custom Name B`, `Score A`, `Score B`, `Over A`, `Over B`, `Batting` ,`Total Overs`, `Result` FROM `matches` WHERE `ID` = '$MatchID' AND (`Country A` = '$Country' OR `Country B` = '$Country' OR `Custom Name A` = '$Country' OR `Custom Name B` = '$Country')");
+        $data = array();
+        while ($row = $Query->fetch_assoc()) {
+            if($Country == $row['Country A'] || $Country == $row['Custom Name A']) {
+                $row['Score'] = $row['Score A'];
+                $row['Over'] = $row['Over A'];
+            } else {
+                $row['Score'] = $row['Score B'];
+                $row['Over'] = $row['Over B'];
+            }
+            unset($row['Score A'], $row['Score B'], $row['Over A'], $row['Over B']);
             $data[] = $row;
         }
         echo json_encode($data);

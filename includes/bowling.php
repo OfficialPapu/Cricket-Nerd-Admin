@@ -41,6 +41,36 @@
           </div>
         </div>
         
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">No Ball</label>
+            <input type="number" id="bowling-noball" name="BowlingNoBall" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue" min="0">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Wide</label>
+            <input type="number" id="bowling-wide" name="BowlingWide" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue" min="0">
+          </div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Bowler Striker</label>
+            <select id="bowling-striker" name="BowlingStriker" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue">
+              <option value="" disabled selected>Select option</option>
+              <option value="y">Yes</option>
+              <option value="">No</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Bowler Action</label>
+            <select id="bowling-action" name="BowlingAction" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue">
+              <option value="" disabled selected>Select action type</option>
+              <option value="Live">Live</option>
+              <option value="">Not Live</option>
+            </select>
+          </div>
+        </div>
+        
         <div class="pt-4">
           <button type="submit" class="w-full bg-brand-blue text-white py-3 rounded-lg font-medium transition-colors flex items-center justify-center">
             <i class="fas fa-save mr-2"></i>

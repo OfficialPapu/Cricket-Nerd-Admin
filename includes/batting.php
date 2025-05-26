@@ -38,6 +38,25 @@
           </div>
         </div>
 
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Batter Striker</label>
+            <select id="batting-striker" name="BattingStriker" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue">
+              <option value="" disabled selected>Select option</option>
+              <option value="y">Yes</option>
+              <option value="">No</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Batter Action</label>
+            <select id="batting-action" name="BattingAction" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue">
+              <option value="" disabled selected>Select action type</option>
+              <option value="Live">Live</option>
+              <option value="">Not Live</option>
+            </select>
+          </div>
+        </div>
+        
         <div class="grid grid-cols-1 gap-4">
           <div>
             <label class="block text-sm font-medium text-gray-700 mb-2">Status</label>

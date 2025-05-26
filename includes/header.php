@@ -24,11 +24,11 @@ $AllMatchesQuery = $conn->query("SELECT `ID`, `Tournament Name`, `Country A`, `C
                         $countryA = !empty($row['Custom Name A']) ? $row['Custom Name A'] : $row['Country A'];
                         $countryB = !empty($row['Custom Name B']) ? $row['Custom Name B'] : $row['Country B'];
                     ?>
-                        <option value="<?= htmlspecialchars($row['ID']) ?>"
-                            data-country-a="<?= htmlspecialchars($countryA) ?>"
-                            data-country-b="<?= htmlspecialchars($countryB) ?>"
+                        <option value="<?= ($row['ID']) ?>"
+                            data-country-a="<?= ($countryA) ?>"
+                            data-country-b="<?= ($countryB) ?>"
                             class="text-black">
-                            <?= htmlspecialchars($countryA . " Vs " . $countryB) ?>
+                            <?php echo ($countryA . " Vs " . $countryB) ?>
                         </option>
                     <?php endwhile; ?>
                 </select>
@@ -62,7 +62,7 @@ $AllMatchesQuery = $conn->query("SELECT `ID`, `Tournament Name`, `Country A`, `C
 
 <!-- Match Info Display -->
 <div id="match-info" class="hidden">
-    <div class="border-t border-gray-200"></div>
+
     <div class="p-5 bg-blue-50">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div class="flex items-center p-3 bg-white rounded-lg shadow-sm">
@@ -85,4 +85,79 @@ $AllMatchesQuery = $conn->query("SELECT `ID`, `Tournament Name`, `Country A`, `C
             </div>
         </div>
     </div>
+
+    <div id="score-dashboard" class="hidden">
+        <div class="border-t border-gray-200"></div>
+        <div class="p-6 bg-white">
+            <div class="mb-6">
+                <h3 class="text-2xl font-bold text-gray-800 flex items-center">
+                    <i class="fas fa-cricket-ball-baseball mr-3 text-brand-blue"></i>
+                    Score Update Dashboard
+                </h3>
+            </div>
+
+            <form id="score-form" class="space-y-6">
+                <!-- Scores Section -->
+                <div class="grid grid-cols-1 gap-6">
+                    <div class="bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-5 border border-blue-200">
+                        <h4 class="text-lg font-semibold text-blue-800 mb-4 flex items-center">
+                            <i class="fas fa-flag mr-2"></i>
+                            <span id="country-b-label">Team Score</span>
+                        </h4>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Score</label>
+                                <input type="text" id="score" name="score" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue" placeholder="0" min="0">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Over</label>
+                                <input type="text" id="over" name="over" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue" placeholder="0.0">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Match Details Section -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-gray-50 rounded-xl p-5 border border-gray-200">
+                        <label class="block text-sm font-medium text-gray-700 mb-2 flex items-center">
+                            <i class="fas fa-clock mr-2 text-brand-blue"></i>
+                            Total Overs
+                        </label>
+                        <input type="number" id="total-overs" name="total-overs" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue" placeholder="0" min="1">
+                    </div>
+
+                    <div class="bg-gray-50 rounded-xl p-5 border border-gray-200">
+                        <label class="block text-sm font-medium text-gray-700 mb-2 flex items-center">
+                            <i class="fas fa-baseball-ball mr-2 text-brand-blue"></i>
+                            Currently Batting
+                        </label>
+                        <select id="current-batting" name="current-batting" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue appearance-none">
+                            <option value="">Select batting...</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 gap-6">
+                    <div class="bg-gray-50 rounded-xl p-5 border border-gray-200">
+                        <label class="block text-sm font-medium text-gray-700 mb-2 flex items-center">
+                            <i class="fas fa-trophy mr-2 text-brand-blue"></i>
+                            Match Result
+                        </label>
+                        <textarea id="match-result" name="match-result" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue" placeholder="Enter match result here" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <!-- Update Button -->
+                <div class="flex justify-center pt-4">
+                    <button type="submit" class="bg-gradient-to-r from-brand-blue to-blue-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-200 flex items-center">
+                        <i class="fas fa-sync-alt mr-2"></i>
+                        Update Match Data
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
 </div>
