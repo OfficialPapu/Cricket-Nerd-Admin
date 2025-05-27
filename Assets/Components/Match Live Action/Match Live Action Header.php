@@ -2,10 +2,26 @@
 $AllMatchesQuery = $conn->query("SELECT `ID`, `Tournament Name`, `Country A`, `Custom Name A`, `Custom Name B`, `Country B` FROM `matches`");
 ?>
 <div class="bg-brand-blue p-4 text-white">
-    <h2 class="text-xl font-bold flex items-center">
-        <i class="fas fa-gamepad mr-2"></i>
-        Match Control Panel
-    </h2>
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <h2 class="text-xl font-bold flex items-center">
+            <i class="fas fa-gamepad mr-2"></i>
+            Match Control Panel
+        </h2>
+        <div class="flex items-center gap-3">
+            <label class="text-sm font-medium whitespace-nowrap">Match Status:</label>
+            <div class="relative min-w-0 flex-1 sm:w-48">
+                <select id="match-status" name="match-status" class="w-full px-3 py-2 bg-white text-gray-800 rounded-lg appearance-none focus:ring-2 focus:ring-blue-300 focus:border-blue-300 border border-gray-200 text-sm">
+                    <option value="" selected disabled>Select status...</option>
+                    <option value="Upcoming">Upcoming</option>
+                    <option value="Live">Live</option>
+                    <option value="Completed">Completed</option>
+                </select>
+                <div class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none text-gray-500">
+                    <i class="fas fa-chevron-down text-xs"></i>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
     <!-- Match Selection -->
@@ -124,7 +140,7 @@ $AllMatchesQuery = $conn->query("SELECT `ID`, `Tournament Name`, `Country A`, `C
                             <i class="fas fa-clock mr-2 text-brand-blue"></i>
                             Total Overs
                         </label>
-                        <input type="number" id="total-overs" name="total-overs" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue" placeholder="0" min="1">
+                        <input type="text" id="total-overs" name="total-overs" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue" placeholder="0" min="1">
                     </div>
 
                     <div class="bg-gray-50 rounded-xl p-5 border border-gray-200">
@@ -141,13 +157,23 @@ $AllMatchesQuery = $conn->query("SELECT `ID`, `Tournament Name`, `Country A`, `C
                 <div class="grid grid-cols-1 gap-6">
                     <div class="bg-gray-50 rounded-xl p-5 border border-gray-200">
                         <label class="block text-sm font-medium text-gray-700 mb-2 flex items-center">
+                            <i class="fas fa-coins mr-2 text-brand-blue"></i>
+                            Toss
+                        </label>
+                        <textarea id="toss" name="toss" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue" placeholder="Enter toss result here" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 gap-6">
+                    <div class="bg-gray-50 rounded-xl p-5 border border-gray-200">
+                        <label class="block text-sm font-medium text-gray-700 mb-2 flex items-center">
                             <i class="fas fa-trophy mr-2 text-brand-blue"></i>
                             Match Result
                         </label>
                         <textarea id="match-result" name="match-result" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue" placeholder="Enter match result here" rows="3"></textarea>
                     </div>
                 </div>
-
+                
                 <!-- Update Button -->
                 <div class="flex justify-center pt-4">
                     <button type="submit" class="bg-gradient-to-r from-brand-blue to-blue-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-200 flex items-center">

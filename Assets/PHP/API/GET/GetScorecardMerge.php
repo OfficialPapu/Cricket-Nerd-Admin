@@ -9,6 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
     s.`Team`,
     s.`Player Name`,
     s.Type,
+    s.`Role`,
     
     batting.`Runs` AS 'Batting Runs',
     batting.`Balls`,
@@ -18,6 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
     batting.`Status`,
     batting.`Batter Striker`,
     batting.`Batter Action`,
+    batting.`Dismissal`,
     
     bowling.`Overs`,
     bowling.`Maidens`,

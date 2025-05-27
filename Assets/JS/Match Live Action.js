@@ -30,6 +30,7 @@ $(document).ready(function () {
     $('#score-dashboard').removeClass('hidden');
     $('#country-b-label').text(`${country} Score`);
     UpdateScoreboard();
+    FetchPlayers();
   });
 
   function UpdateScoreboard() {
@@ -46,7 +47,13 @@ $(document).ready(function () {
           $('#score').val(data['Score']);
           $('#over').val(data['Over']);
           $('#total-overs').val(data['Total Overs']);
+          if (data.Status) {
+            $('#match-status').val(data.Status).change();
+          } else {
+            $('#match-status').val("").change();
+          }
           $('#current-batting').val(data.Batting).change();
+          $('#toss').val(data.Toss);
           $('#match-result').val(data.Result);
         }
       }
@@ -94,8 +101,10 @@ $(document).ready(function () {
           if (batting['Batter Action']) {
             $('#batting-action').val(batting['Batter Action']).change();
           }
+          $('#dismissal').val(batting.Dismissal || "");
         } else {
           $('#batting-runs, #batting-balls, #batting-fours, #batting-sixes, #batting-sr').val(0);
+          $('#dismissal').val("");
         }
       }
     });
@@ -190,14 +199,78 @@ $(document).ready(function () {
     });
   }
 
+
+  // Event handlers
+  $(document).on('click', '.custom-checkbox', function () {
+    const squadId = parseInt($(this).data('squad-id'));
+    let isPlaying = $(this).hasClass('checked');
+    UpdatePlayerType(squadId, isPlaying);
+  });
+
+  $(document).on('click', '.player-card', function (e) {
+    if (!$(e.target).hasClass('custom-checkbox')) {
+      const squadId = parseInt($(this).data('squad-id'));
+      let isPlaying = $(this).hasClass('selected');
+      UpdatePlayerType(squadId, isPlaying);
+    }
+  });
+
+  function UpdatePlayerType(squadId, isPlaying) {
+    let Type = !isPlaying ? 'Playing' : 'Bench';
+    $.ajax({
+      url: 'Assets/PHP/API/POST/Scoreboard.php',
+      type: 'POST',
+      data: { UpdatePlayerType: true, squadId: squadId, Type: Type },
+      success: function (response) {
+        response = response.trim();
+        if (response === "Success") {
+          FetchPlayers();
+        } else {
+          butterup.toast({
+            message: 'Error updating player type',
+            icon: true,
+            dismissable: true,
+            type: 'error',
+          });
+        }
+      }
+    });
+  }
+
+  function FetchPlayers() {
+    let matchID = $('#match-selector').val();
+    let country = $('#country-selector').val();
+    $.ajax({
+      url: 'Assets/PHP/API/GET/Scoreboard.php',
+      type: "GET",
+      data: {
+        FetchPlayers: true,
+        matchID: matchID,
+        country: country
+      },
+      dataType: 'json',
+      success: function (response) {
+        if (response.length > 0) {
+          RenderPlayers(response);
+          updateCounts(response);
+          updateSelectedTeam(response);
+        } else {
+          $('#players-grid').html('<div class="player-card">No players available</div>');
+          $('#selected-team-section').hide();
+        }
+      }
+    });
+  }
   $('#score-form').on("submit", function (e) {
     e.preventDefault();
     if (!validateSelections()) return;
     let matchID = $('#match-selector').val();
     let country = $('#country-selector').val();
+    let matchstatus = $('#match-status').val();
     const formData = new FormData(this);
     formData.append("MatchID", matchID);
     formData.append("Country", country);
+    formData.append("matchstatus", matchstatus);
     formData.append("UpdateScoreBoard", true);
     $.ajax({
       url: "Assets/PHP/API/POST/Scoreboard.php",
@@ -422,4 +495,65 @@ $(document).ready(function () {
     }
     return true;
   }
+
+  function RenderPlayers(players) {
+    const grid = $('#players-grid');
+    grid.empty();
+    players.forEach(player => {
+      const playerCard = $(`
+                    <div class="player-card bg-white border rounded-lg p-4 ${player.Type === 'Playing' ? 'selected' : ''}" data-squad-id="${player.ID}">
+                        <div class="flex items-center space-x-4">
+                            <div class="custom-checkbox ${player.Type === 'Playing' ? 'checked' : ''}" data-squad-id="${player.ID}"></div>
+                            <div class="flex-1">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-10 h-10 brand-blue rounded-full flex items-center justify-center text-white">
+                                        <span>${player['Player Name'][0].toUpperCase()}${player['Player Name'].split(' ')[1][0].toUpperCase()}</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">${player['Player Name']}</h4>
+                                        <p class="text-sm text-gray-600">${player['Role']}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                ${player.Type === 'Playing' ? '<i class="fas fa-check-circle text-green-500"></i>' : ''}
+                            </div>
+                        </div>
+                    </div>
+                `);
+
+      grid.append(playerCard);
+    });
+  }
 });
+
+function updateCounts(players) {
+  const selectedCount = players.filter(p => p.Type === 'Playing').length;
+  if (selectedCount > 0) {
+    $('#selected-team-section').show();
+  } else {
+    $('#selected-team-section').hide();
+  }
+}
+
+function updateSelectedTeam(players) {
+  const selectedPlayers = players.filter(p => p.Type === 'Playing');
+  const selectedContainer = $('#selected-players');
+  selectedContainer.empty();
+
+  selectedPlayers.forEach((player, index) => {
+    const playerItem = $(`
+                  <div class="flex items-center p-3 bg-blue-50 rounded-lg border border-blue-200">
+                      <div class="w-8 h-8 brand-blue text-white rounded-full flex items-center justify-center mr-3 text-sm font-bold">
+                          ${index + 1}
+                      </div>
+                      <div class="flex-1">
+                          <h5 class="font-semibold text-gray-800">${player['Player Name']}</h5>
+                          <p class="text-xs text-gray-600">${player['Role']}</p>
+                      </div>
+                  </div>
+              `);
+    selectedContainer.append(playerItem);
+  });
+}
+

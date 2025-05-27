@@ -12,11 +12,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $country = $_POST['country'];
         $playerName = $_POST['PlayerName'];
         $role = $_POST['role'];
+        $type = $_POST['type'];
 
         if (!empty($matchID) && !empty($country) && !empty($playerName) && !empty($role)) {
-            $stmt = $conn->prepare("INSERT INTO squads (`Match ID`, `Team`, `Player Name`, `Type`) VALUES (?, ?, ?, ?)");
+            $stmt = $conn->prepare("INSERT INTO squads (`Match ID`, `Team`, `Player Name`, `Type`, `Role`) VALUES (?, ?, ?, ?, ?)");
 
-            $stmt->bind_param("ssss", $matchID, $country, $playerName, $role);
+            $stmt->bind_param("sssss", $matchID, $country, $playerName, $type, $role);
 
             if ($stmt->execute()) {
                 echo "Squad added successfully!";
@@ -73,6 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $status = $_POST['BattingStatus'];
         $striker = $_POST['BattingStriker'];
         $action = $_POST['BattingAction'];
+        $dismissal = $conn->real_escape_string($_POST['dismissal']);
 
         $checkQuery = $conn->query("SELECT * FROM `scorecard_batting` WHERE `Squad ID` = '$SquadID'");
 
@@ -86,12 +88,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             `Strike Rate` = '$strikeRate',
             `Status` = '$status',
             `Batter Striker` = '$striker',
-            `Batter Action` = '$action'
+            `Batter Action` = '$action',
+            `Dismissal` = '$dismissal'
         WHERE `Squad ID` = '$SquadID'");
         } else {
             $sql = $conn->query("INSERT INTO `scorecard_batting` 
-                (`Squad ID`, `Runs`, `Balls`, `Fours`, `Sixes`, `Strike Rate`, `Status`, `Batter Striker`, `Batter Action`) 
-                VALUES ('$SquadID', '$runs', '$balls', '$fours', '$sixes', '$strikeRate', '$status', '$striker', '$action')");
+                (`Squad ID`, `Runs`, `Balls`, `Fours`, `Sixes`, `Strike Rate`, `Status`, `Batter Striker`, `Batter Action`, `Dismissal`) 
+                VALUES ('$SquadID', '$runs', '$balls', '$fours', '$sixes', '$strikeRate', '$status', '$striker', '$action', '$dismissal')");
         }
         if ($sql) {
             echo "Success";
@@ -153,13 +156,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $Country = $_POST["Country"];
         $MatchData = $conn->query("SELECT * FROM `matches` WHERE `ID` = '$MatchID'")->fetch_assoc();
         $score = $_POST['score'];
+        $matchstatus = $_POST['matchstatus'];
         $over = $_POST['over'];
         $totalOvers = $_POST['total-overs'];
         $currentBatting = $_POST['current-batting'];
+        $toss = $_POST['toss'];
         $result = $_POST['match-result'];
         if ($Country == $MatchData['Country A'] || $Country == $MatchData['Custom Name A']) {
             $sql = $conn->query("UPDATE `matches` 
             SET 
+                `Status` = '$matchstatus',
+                `Toss` = '$toss',
                 `Score A` = '$score',
                 `Over A` = '$over',
                 `Total Overs` = '$totalOvers',
@@ -169,6 +176,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             $sql = $conn->query("UPDATE `matches` 
             SET 
+                `Status` = '$matchstatus',
+                `Toss` = '$toss',
                 `Score B` = '$score',
                 `Over B` = '$over',
                 `Total Overs` = '$totalOvers',
@@ -176,6 +185,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 `Result` = '$result'
             WHERE `ID` = '$MatchID'");
         }
+        if ($sql) {
+            echo "Success";
+        } else {
+            echo "Error";
+        }
+    }
+
+
+    if (isset($_POST['UpdatePlayerType'])) {
+        $squadId = $_POST['squadId'];
+        $type = $_POST['Type'];
+        $sql = $conn->query("UPDATE `squads` SET `Type` = '$type' WHERE `ID` = '$squadId'");
         if ($sql) {
             echo "Success";
         } else {

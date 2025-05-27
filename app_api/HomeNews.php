@@ -11,7 +11,7 @@ if (!$conn) {
     exit();
 }
 
-$categories = ['Nepal National', 'Nepal Domestic', 'Editorial', 'Elite Cup (Jay Trophy)', 'Nepal Premier League'];
+$categories = ['Nepal National', 'Nepal Domestic', 'Editorial', 'Elite Cup (Jay Trophy)', 'Nepal Premier League','Associate News'];
 $newsData = [];
 $latestTimes = [];
 

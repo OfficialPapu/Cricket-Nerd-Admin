@@ -1,0 +1,256 @@
+[27-May-2025 11:19:25 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:19:25 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:19:25 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 11:19:25 UTC] PHP Warning:  Undefined array key "type" in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 15
+[27-May-2025 11:19:40 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:19:40 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:19:40 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 11:19:40 UTC] PHP Warning:  Undefined array key "type" in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 15
+[27-May-2025 11:19:56 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:19:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:19:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 11:19:56 UTC] PHP Warning:  Undefined array key "type" in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 15
+[27-May-2025 11:20:10 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:20:10 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:20:10 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 11:20:10 UTC] PHP Warning:  Undefined array key "type" in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 15
+[27-May-2025 11:20:22 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:20:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:20:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 11:20:22 UTC] PHP Warning:  Undefined array key "type" in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 15
+[27-May-2025 11:20:33 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:20:33 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:20:33 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 11:20:33 UTC] PHP Warning:  Undefined array key "type" in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 15
+[27-May-2025 11:20:33 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'Type' cannot be null in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:22
+Stack trace:
+#0 /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php(22): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 22
+[27-May-2025 11:20:44 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:20:44 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:20:44 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 11:20:44 UTC] PHP Warning:  Undefined array key "type" in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 15
+[27-May-2025 11:20:44 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'Type' cannot be null in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:22
+Stack trace:
+#0 /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php(22): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 22
+[27-May-2025 11:20:53 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:20:53 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:20:53 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 11:20:53 UTC] PHP Warning:  Undefined array key "type" in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 15
+[27-May-2025 11:20:53 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'Type' cannot be null in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:22
+Stack trace:
+#0 /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php(22): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 22
+[27-May-2025 11:21:02 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:21:02 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:21:02 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 11:21:02 UTC] PHP Warning:  Undefined array key "type" in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 15
+[27-May-2025 11:21:02 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'Type' cannot be null in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:22
+Stack trace:
+#0 /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php(22): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 22
+[27-May-2025 11:21:12 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:21:12 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:21:12 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 11:21:12 UTC] PHP Warning:  Undefined array key "type" in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 15
+[27-May-2025 11:21:12 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'Type' cannot be null in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:22
+Stack trace:
+#0 /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php(22): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 22
+[27-May-2025 11:21:16 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:21:16 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:21:16 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 11:21:23 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:21:23 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:21:23 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 11:21:23 UTC] PHP Warning:  Undefined array key "type" in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 15
+[27-May-2025 11:21:23 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'Type' cannot be null in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:22
+Stack trace:
+#0 /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php(22): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 22
+[27-May-2025 11:21:35 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:21:35 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:21:35 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 11:21:35 UTC] PHP Warning:  Undefined array key "type" in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 15
+[27-May-2025 11:21:35 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'Type' cannot be null in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:22
+Stack trace:
+#0 /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php(22): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 22
+[27-May-2025 11:21:47 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:21:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:21:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 11:21:47 UTC] PHP Warning:  Undefined array key "type" in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 15
+[27-May-2025 11:21:47 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'Type' cannot be null in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:22
+Stack trace:
+#0 /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php(22): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 22
+[27-May-2025 11:21:59 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:21:59 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:21:59 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 11:21:59 UTC] PHP Warning:  Undefined array key "type" in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 15
+[27-May-2025 11:21:59 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'Type' cannot be null in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:22
+Stack trace:
+#0 /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php(22): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 22
+[27-May-2025 11:22:09 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:22:09 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:22:09 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 11:22:09 UTC] PHP Warning:  Undefined array key "type" in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 15
+[27-May-2025 11:22:09 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'Type' cannot be null in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:22
+Stack trace:
+#0 /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php(22): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 22
+[27-May-2025 11:23:18 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:23:18 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:23:18 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 11:23:18 UTC] PHP Warning:  Undefined array key "type" in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 15
+[27-May-2025 11:23:18 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'Type' cannot be null in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:22
+Stack trace:
+#0 /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php(22): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 22
+[27-May-2025 11:23:28 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:23:28 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:23:28 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 11:23:28 UTC] PHP Warning:  Undefined array key "matchstatus" in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 157
+[27-May-2025 11:23:30 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:23:30 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:23:30 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 11:23:30 UTC] PHP Warning:  Undefined array key "type" in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 15
+[27-May-2025 11:23:30 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'Type' cannot be null in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:22
+Stack trace:
+#0 /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php(22): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 22
+[27-May-2025 11:23:56 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:23:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:23:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 11:23:56 UTC] PHP Warning:  Undefined array key "type" in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 15
+[27-May-2025 11:23:56 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'Type' cannot be null in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:22
+Stack trace:
+#0 /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php(22): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 22
+[27-May-2025 11:24:06 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:24:06 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:24:06 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 11:24:06 UTC] PHP Warning:  Undefined array key "type" in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 15
+[27-May-2025 11:24:06 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'Type' cannot be null in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:22
+Stack trace:
+#0 /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php(22): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 22
+[27-May-2025 11:24:21 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:24:21 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:24:21 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 11:24:21 UTC] PHP Warning:  Undefined array key "type" in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 15
+[27-May-2025 11:24:21 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'Type' cannot be null in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:22
+Stack trace:
+#0 /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php(22): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 22
+[27-May-2025 11:24:31 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:24:31 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:24:31 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 11:24:31 UTC] PHP Warning:  Undefined array key "type" in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 15
+[27-May-2025 11:24:31 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'Type' cannot be null in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:22
+Stack trace:
+#0 /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php(22): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 22
+[27-May-2025 11:24:33 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:24:33 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:24:33 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 11:24:46 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:24:46 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:24:46 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 11:24:46 UTC] PHP Warning:  Undefined array key "type" in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 15
+[27-May-2025 11:24:46 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'Type' cannot be null in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:22
+Stack trace:
+#0 /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php(22): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 22
+[27-May-2025 11:24:56 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:24:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:24:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 11:24:56 UTC] PHP Warning:  Undefined array key "type" in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 15
+[27-May-2025 11:24:56 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'Type' cannot be null in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:22
+Stack trace:
+#0 /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php(22): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 22
+[27-May-2025 11:25:02 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:25:02 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:25:02 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 11:25:07 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:25:07 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:25:07 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 11:25:07 UTC] PHP Warning:  Undefined array key "type" in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 15
+[27-May-2025 11:25:07 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'Type' cannot be null in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:22
+Stack trace:
+#0 /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php(22): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 22
+[27-May-2025 11:25:30 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:25:30 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:25:30 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 11:25:38 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:25:38 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:25:38 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 11:25:38 UTC] PHP Warning:  Undefined array key "type" in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 15
+[27-May-2025 11:25:38 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'Type' cannot be null in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:22
+Stack trace:
+#0 /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php(22): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 22
+[27-May-2025 11:25:47 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:25:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:25:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 11:25:47 UTC] PHP Warning:  Undefined array key "type" in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 15
+[27-May-2025 11:25:47 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'Type' cannot be null in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:22
+Stack trace:
+#0 /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php(22): mysqli_stmt->execute()
+#1 {main}
+  thrown in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 22
+[27-May-2025 11:27:56 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:27:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:27:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 11:30:35 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:30:35 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:30:35 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 11:53:52 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:53:52 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:53:52 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 11:54:09 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:54:09 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:54:09 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 11:54:14 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:54:14 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:54:14 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 11:54:25 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 11:54:25 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 11:54:25 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 12:25:19 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 12:25:19 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 12:25:19 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 12:25:19 UTC] PHP Warning:  Undefined array key "BattingStriker" in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 75
+[27-May-2025 12:25:19 UTC] PHP Warning:  Undefined array key "BattingAction" in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 76
+[27-May-2025 12:25:28 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 12:25:28 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 12:25:28 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3
+[27-May-2025 12:25:28 UTC] PHP Warning:  Undefined array key "BattingStriker" in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 75
+[27-May-2025 12:25:28 UTC] PHP Warning:  Undefined array key "BattingAction" in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 76
+[27-May-2025 12:25:38 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php on line 3
+[27-May-2025 12:25:38 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 2
+[27-May-2025 12:25:38 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/POST/Scoreboard.php:1) in /home/thecricn/admin.thecricnerd.com/Assets/PHP/API/Config/Config.php on line 3

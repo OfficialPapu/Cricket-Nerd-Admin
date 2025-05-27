@@ -57,7 +57,7 @@
           </div>
         </div>
         
-        <div class="grid grid-cols-1 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label class="block text-sm font-medium text-gray-700 mb-2">Status</label>
             <select id="batting-status" name="BattingStatus" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue">
@@ -65,6 +65,10 @@
               <option value="Out">Out</option>
               <option value="Not Out">Not Out</option>
             </select>
+          </div>
+            <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Dismissal</label>
+            <input type="text" id="dismissal" name="dismissal" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue" placeholder="Enter dismissal">
           </div>
         </div>
 

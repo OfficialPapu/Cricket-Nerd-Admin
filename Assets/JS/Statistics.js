@@ -1,65 +1,12 @@
+const urlget = "Assets/PHP/API/GET/Statistics.php";
+const urlpost = "Update Players Action/Statistics.php";
 $(document).ready(function () {
-    const urlget = "Assets/PHP/API/GET/Statistics.php";
-    const urlpost = "Assets/PHP/API/POST/Statistics.php";
-
-    let DropdownOpen = false;
-    let options = [];
-
-    const fetchOptions = async () => {
-        try {
-            let response = await axios.get(urlget, {
-                params: {
-                    ListAllPlayers: true
-                }
-            });
-            options = response.data;
-            populateDropdown("dropdownMenu");
-        } catch (error) {
-            console.error("Error fetching data: ", error);
-        }
-    };
-
-    const populateDropdown = (dropdownMenuId) => {
-        let dropdownMenu = $('#' + dropdownMenuId);
-        dropdownMenu.empty();
-        options.forEach((option, index) => {
-            dropdownMenu.append(`
-                <div class="flex items-center gap-3 px-4 py-3 hover:bg-muted rounded-t-md cursor-pointer playerOption" 
-                     data-index="${index}" 
-                     data-country="${option['Player Name']}" 
-                     data-icon="${option['Player Photo']}">
-                    <img src="Media/Images/${option['Player Photo']}" alt="${option['Player Name']}" width="32" height="32" class="rounded-md" id="selectedPlayerImage" />
-                    <div class="flex-1">    
-                        <div class="font-medium">${option['Player Name']}</div>
-                        <p class="text-sm text-muted-foreground">This is ${option['Country Name']}</p>
-                    </div>
-                </div>
-            `);
-        });
-    };
-
-    $('#dropdownToggle').click(function () {
-        DropdownOpen = !DropdownOpen;
-        $('#dropdownMenu').toggleClass('hidden');
-    });
-
-    $('#dropdownMenu').on('click', '.playerOption', function () {
-        let selectedIndex = $(this).data('index');
-        let selectedPlayer = options[selectedIndex];
-
-        $('#selectedPlayer').text(selectedPlayer['Player Name']);
-        $('#plusIcon').removeClass('hidden');
-        DropdownOpen = false;
-        $('#dropdownMenu').addClass('hidden');
-        $("#PlayerID").val(selectedPlayer['ID']);
-        $('#selectedPlayerImage').attr('src', `Media/Images/${selectedPlayer['Player Photo']}`);
-        $('#selectedPlayerImage').attr('alt', selectedPlayer['Player Name']);
-    });
-
+    let PlayerID = $("#uploadForm").data('playerid');
     $('#submitBtn').click(function (e) {
         e.preventDefault();
         let formData = new FormData($('#uploadForm')[0]);
-        formData.append("Statistics",true);
+        formData.append("Statistics", true);
+        formData.append("PlayerID", PlayerID);
         $.ajax({
             url: urlpost,
             type: 'POST',
@@ -72,7 +19,7 @@ $(document).ready(function () {
                     $('#selectedPlayer').text('Select a Player');
                     $('#selectedPlayerImage').attr('src', 'https://generated.vusercontent.net/placeholder.svg');
                     butterup.toast({
-                        message: 'Statistics successfully uploaded',
+                        message: 'Updated successfully.',
                         icon: true,
                         dismissable: true,
                         type: 'success',
@@ -96,5 +43,47 @@ $(document).ready(function () {
         });
     });
 
-    fetchOptions();
+
+    $('#format').change(function () {
+        const selectedFormat = $(this).val();
+        if (selectedFormat) {
+            $.ajax({
+                url: urlget,
+                type: 'GET',
+                data: { UpdateFetchData: true, format: selectedFormat, PlayerID: PlayerID },
+                success: function (response) {
+                    response = JSON.parse(response);
+                    if (response['message'] == "Success") {
+                        response = response.data;
+                        $('#matches').val(response[0]["Total Matches"]);
+                        $('#runs').val(response[0]["Run Scored"]);
+                        $('#battinginnings').val(response[0]["Batting Innings"]);
+                        $('#bowlinginnings').val(response[0]["Bowlings Innings"]);
+                        $('#strikeRate').val(response[0]["Strike Rate"]);
+                        $('#highestScore').val(response[0]["Highest Score"]);
+                        $('#halfCenturies').val(response[0]["Half Centuries"]);
+                        $('#centuries').val(response[0]["Centuries"]);
+                        $('#average').val(response[0]["Batting Average"]);
+                        $('#economy').val(response[0]["Bowling Economy"]);
+                        $('#bestbowling').val(response[0]["Best Bowlings"]);
+                        $('#wickets').val(response[0]["Wickets Taken"]);
+                    } else {
+                        $('#matches').val("");
+                        $('#runs').val("");
+                        $('#battinginnings').val("");
+                        $('#bowlinginnings').val("");
+                        $('#strikeRate').val("");
+                        $('#highestScore').val("");
+                        $('#halfCenturies').val("");
+                        $('#centuries').val("");
+                        $('#average').val("");
+                        $('#economy').val("");
+                        $('#bestbowling').val("");
+                        $('#wickets').val("");
+                    }
+                }
+            });
+        }
+    });
+
 });

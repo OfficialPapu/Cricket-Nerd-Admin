@@ -1,5 +1,5 @@
 <?php
-// include "../Config/Config.php";
+include "../Config/Config.php";
 if ($_SERVER['REQUEST_METHOD'] == "GET") {
     $Array = [];
     if (isset($_GET["GetAllMatches"])) {

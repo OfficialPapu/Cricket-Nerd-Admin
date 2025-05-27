@@ -67,12 +67,24 @@ $AllMatchesQuery = $conn->query("SELECT `ID`, `Tournament Name`, `Country A`, `C
 
                 <!-- Role Selection Dropdown -->
                 <div>
-                    <label for="role" class="block text-lg font-medium text-gray-700">Select Role</label>
-                    <select name="role" id="role" class="block w-full p-4 mt-2 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    <label for="type" class="block text-lg font-medium text-gray-700">Select Type</label>
+                    <select name="type" id="type" class="block w-full p-4 mt-2 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" required>
                         <option value="Playing">Playing</option>
                         <option value="Bench">Bench</option>
                     </select>
                 </div>
+                
+                <div>
+                    <label for="role" class="block text-lg font-medium text-gray-700">Select Role</label>
+                    <select name="role" id="role" class="block w-full p-4 mt-2 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                        <option value="Batter">Batter</option>
+                        <option value="Bowler">Bowler</option>
+                        <option value="WK Batter">WK Batter</option>
+                        <option value="Batting All Rounder">Batting All Rounder</option>
+                        <option value="Bowling All Rounder">Bowling All Rounder</option>
+                    </select>
+                </div>
+
 
                 <!-- Submit Button -->
                 <div class="flex items-center justify-center">
@@ -86,7 +98,7 @@ $AllMatchesQuery = $conn->query("SELECT `ID`, `Tournament Name`, `Country A`, `C
     </div>
 
     <!-- Script for Dynamic Country Selection and Form Submission -->
-    <script src="/Assets/JS/Squads.js"></script>
+    <script src="Assets/JS/Squads.js"></script>
 
 </body>
 

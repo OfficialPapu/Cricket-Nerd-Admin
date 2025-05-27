@@ -102,10 +102,10 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
     if (isset($_GET['FetchScore'])) {
         $MatchID = $_GET["MatchID"];
         $Country = $_GET["Country"];
-        $Query = $conn->query("SELECT `Country A`, `Country B`, `Custom Name A`, `Custom Name B`, `Score A`, `Score B`, `Over A`, `Over B`, `Batting` ,`Total Overs`, `Result` FROM `matches` WHERE `ID` = '$MatchID' AND (`Country A` = '$Country' OR `Country B` = '$Country' OR `Custom Name A` = '$Country' OR `Custom Name B` = '$Country')");
+        $Query = $conn->query("SELECT `Country A`, `Country B`, `Custom Name A`, `Custom Name B`, `Status`,`Toss`, `Score A`, `Score B`, `Over A`, `Over B`, `Batting` ,`Total Overs`, `Result` FROM `matches` WHERE `ID` = '$MatchID' AND (`Country A` = '$Country' OR `Country B` = '$Country' OR `Custom Name A` = '$Country' OR `Custom Name B` = '$Country')");
         $data = array();
         while ($row = $Query->fetch_assoc()) {
-            if($Country == $row['Country A'] || $Country == $row['Custom Name A']) {
+            if ($Country == $row['Country A'] || $Country == $row['Custom Name A']) {
                 $row['Score'] = $row['Score A'];
                 $row['Over'] = $row['Over A'];
             } else {
@@ -113,6 +113,18 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
                 $row['Over'] = $row['Over B'];
             }
             unset($row['Score A'], $row['Score B'], $row['Over A'], $row['Over B']);
+            $data[] = $row;
+        }
+        echo json_encode($data);
+    }
+
+    if (isset($_GET['FetchPlayers'])) {
+        $MatchID = $_GET["matchID"];
+        $Country = $_GET["country"];
+        $Query = $conn->query("SELECT * FROM `squads` WHERE `Match ID` = '$MatchID' AND `Team` = '$Country'");
+
+        $data = array();
+        while ($row = $Query->fetch_assoc()) {
             $data[] = $row;
         }
         echo json_encode($data);

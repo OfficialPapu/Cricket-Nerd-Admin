@@ -102,5 +102,5 @@ include $base_url . 'Assets/Components/Navbar.php';
     </div>
     
 </body>
-<script src="Update Players JS/Statistics.js" type="module"></script>
+<script src="Assets/JS/Statistics.js" type="module"></script>
 </html>

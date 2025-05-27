@@ -36,7 +36,7 @@ include $base_url . 'Assets/PHP/API/Config/Config.php';
 
     <!-- Match & Country Selection -->
     <div class="bg-white rounded-2xl shadow-xl mb-8 overflow-hidden fade-in-up">
-      <?php include 'Assets/Components/Match Live Action/Match Live Action Header.php'; ?>
+      <?php include $base_url . 'Assets/Components/Match Live Action/Match Live Action Header.php'; ?>
     </div>
 
     <!-- Tab Navigation and Content -->
@@ -60,28 +60,36 @@ include $base_url . 'Assets/PHP/API/Config/Config.php';
             <i class="fas fa-microphone mr-2"></i>
             <span>Commentary</span>
           </button>
+          <button id="tab-player" class="tab-btn px-6 md:px-8 py-4 rounded-xl font-semibold transition-all duration-300 border-2 border-gray-200 text-gray-600 hover:bg-gray-50 hover:border-gray-300 mb-2 md:mb-0 shadow-sm">
+            <i class="fas fa-user mr-2"></i>
+            <span>Player</span>
+          </button>
         </nav>
       </div>
 
       <!-- Batting Tab -->
       <div id="content-batting" class="tab-content active">
-        <?php include 'Assets/Components/Match Live Action/Batting.php'; ?>
+        <?php include $base_url . 'Assets/Components/Match Live Action/Batting.php'; ?>
       </div>
 
       <!-- Bowling Tab -->
       <div id="content-bowling" class="tab-content">
-        <?php include 'Assets/Components/Match Live Action/Bowling.php'; ?>
+        <?php include $base_url . 'Assets/Components/Match Live Action/Bowling.php'; ?>
       </div>
 
       <!-- Extras Tab -->
       <div id="content-extras" class="tab-content">
-        <?php include 'Assets/Components/Match Live Action/Extras.php'; ?>
+        <?php include $base_url . 'Assets/Components/Match Live Action/Extras.php'; ?>
       </div>
 
       <!-- Commentary Tab -->
       <div id="content-commentary" class="tab-content">
-        <?php include 'Assets/Components/Match Live Action/Commentary.php'; ?>
+        <?php include $base_url . 'Assets/Components/Match Live Action/Commentary.php'; ?>
       </div>
+      
+         <div id="content-player" class="tab-content">
+         <?php include $base_url . 'Assets/Components/Match Live Action/ManagePlayer.php'; ?>   
+        </div>
     </div>
   </div>
 
